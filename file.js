@@ -39,49 +39,40 @@ $(document).ready(function(){
 
 var linkbox = document.querySelector('.gitmodal');
 var modalbg = document.querySelector('.modal-bg');
+var modalclose = document.querySelector('.close');
 
 linkbox.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
+    modalbg.classList.add('modal-active');
+    
 });
+
+modalclose.addEventListener('click', function(){
+    modalbg.classList.remove('modal-active');
+});
+
+
 var linkbox1 = document.querySelector('.gitmodal1');
 var modalbg = document.querySelector('.modal-bg');
 
 linkbox1.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
+    modalbg.classList.add('modal-active');
 });
 var linkbox2 = document.querySelector('.gitmodal2');
 var modalbg = document.querySelector('.modal-bg');
 
 linkbox2.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
+    modalbg.classList.add('modal-active');
 });
 var linkbox3 = document.querySelector('.gitmodal3');
 var modalbg = document.querySelector('.modal-bg');
 
 linkbox3.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
+    modalbg.classList.add('modal-active');
 });
 var linkbox4 = document.querySelector('.gitmodal4');
 var modalbg = document.querySelector('.modal-bg');
 
 linkbox4.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
+    modalbg.classList.add('modal-active');
 });
-var linkbox5= document.querySelector('.gitmodal5');
-var modalbg = document.querySelector('.modal-bg');
 
-linkbox5.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
-});
-var linkbox6 = document.querySelector('.gitmodal6');
-var modalbg = document.querySelector('.modal-bg');
-
-linkbox6.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
-});
-var linkbox7 = document.querySelector('.gitmodal7');
-var modalbg = document.querySelector('.modal-bg');
-
-linkbox7.addEventListener('click', function(){
-    modalbg.classList.add('modal-active')
-});
