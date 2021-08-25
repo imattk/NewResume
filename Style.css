@@ -319,11 +319,7 @@ ul#nav li.current a {
 /* Portfolio Content */
 
 
-.portfolio-item .item-wrap img{
-    max-width: ;
-    max-height: ;
- 
-}
+
 
 .portfolio-item .item-wrap a {
    
@@ -453,6 +449,7 @@ ul#nav li.current a {
     opacity: 1;
 }
 .modal{
+    position: relative;
     background-color: #a09f9f;
     color: #fff;
     font-weight: 200;
@@ -485,7 +482,14 @@ ul#nav li.current a {
     background: #828485;
   text-decoration: none;
 }
-
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 2;
+}
 /* Footer */
 
 footer {
