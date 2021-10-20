@@ -2,21 +2,20 @@ $(document).ready(function(){
     // Add smooth scrolling to all links
       $("a").on('click', function(event) {
   
-      // Make sure this.hash has a value before overriding default behavior
+      
       if (this.hash !== "") {
-        // Prevent default anchor click behavior
+        
         event.preventDefault();
   
         // Store hash
         var hash = this.hash;
   
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+      
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 800, function(){
      
-          // Add hash (#) to URL when done scrolling (default click behavior)
+          
           window.location.hash = hash;
         });
       } // End if
@@ -76,3 +75,57 @@ linkbox4.addEventListener('click', function(){
     modalbg.classList.add('modal-active');
 });
 
+
+// this is the scroll magic
+const intro = document.querySelector('.intro');
+const video = intro.querySelector('video');
+const text = intro.querySelector('h1');
+const text2 = intro.querySelector('h2');
+const section = document.querySelector('section');
+const end = section.querySelector('h1');
+
+const controller = new ScrollMagic.Controller();
+//scene
+let scene = new ScrollMagic.Scene({
+    duration: 8000,
+    triggerElement: intro,
+    triggerHook: -1
+})
+// .addIndicators()
+.setPin(intro)
+.addTo(controller);
+
+const textAnim = TweenMax.fromTo(text,3,{opacity:1},{opacity:0});
+
+let scene2 = new ScrollMagic.Scene({
+    duration: 8000,
+    triggerElement: intro,
+    triggerHook: 0
+})
+.setTween(textAnim)
+.addTo(controller);
+
+const textAnim2 = TweenMax.fromTo(text2,3,{opacity:-1},{opacity:1});
+
+let scene3 = new ScrollMagic.Scene({
+    duration: 8000,
+    triggerElement: intro,
+    triggerHook: 3
+})
+.setTween(textAnim2)
+.addTo(controller);
+
+// video animation
+let accelamount = 1;
+let scrollpos = 0
+let delay = 0;
+
+scene.on('update', e =>{
+    scrollpos = e.scrollPos / 950;
+    
+});
+
+setInterval(() => {
+    delay += (scrollpos - delay) * accelamount;
+    video.currentTime = delay;
+},133.3);
