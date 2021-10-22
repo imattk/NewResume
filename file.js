@@ -87,7 +87,7 @@ const end = section.querySelector('h1');
 const controller = new ScrollMagic.Controller();
 //scene
 let scene = new ScrollMagic.Scene({
-    duration: 8000,
+    duration: 6000,
     triggerElement: intro,
     triggerHook: -1
 })
@@ -98,7 +98,7 @@ let scene = new ScrollMagic.Scene({
 const textAnim = TweenMax.fromTo(text,3,{opacity:1},{opacity:0});
 
 let scene2 = new ScrollMagic.Scene({
-    duration: 8000,
+    duration: 6000,
     triggerElement: intro,
     triggerHook: 0
 })
@@ -108,7 +108,7 @@ let scene2 = new ScrollMagic.Scene({
 const textAnim2 = TweenMax.fromTo(text2,3,{opacity:-1},{opacity:1});
 
 let scene3 = new ScrollMagic.Scene({
-    duration: 8000,
+    duration: 6000,
     triggerElement: intro,
     triggerHook: 3
 })
